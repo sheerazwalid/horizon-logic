@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Horizon Logic</title>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- SAME CSS AS horizonSite.html -->
+  <style>
+    /* BASE */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+    html { font-size: clamp(14px, 1vw + 0.5rem, 18px); }
+    body { color:#0f172a; background:#fff; line-height:1.6; scroll-behavior:smooth; }
+    a { text-decoration:none; color:inherit; }
+    .container { width:min(90%,1400px); margin:auto; }
+
+    header { background:#0f172a; color:#fff; padding:16px 0; }
+    .header-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .logo { font-size:1.5rem; font-weight:700; }
+    nav a { margin:0 1rem; color:#cbd5f5; }
+    nav a:hover { color:#fff; }
+    .btn-primary { background:#2563eb; color:#fff; padding:10px 18px; border-radius:6px; font-weight:600; }
+
+    .hero {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color:#fff;
+      padding:120px 0;
+      text-align:center;
+    }
+
+    section { padding:90px 0; }
+    section h2 { text-align:center; font-size:2.2rem; margin-bottom:40px; font-weight:800; }
+    .section-intro { max-width:900px; margin:0 auto 50px; text-align:center; color:#64748b; }
+
+    .platforms-grid {
+      display:grid;
+      gap:28px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+
+    .platform {
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:10px;
+      padding:32px;
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+
+    .platform:hover {
+      transform:translateY(-6px);
+      box-shadow:0 12px 28px rgba(0,0,0,.08);
+    }
+
+    .platform h3 { font-size:1.4rem; margin-bottom:12px; }
+    .platform p { color:#475569; margin-bottom:18px; }
+
+    .usecases { padding-left:20px; color:#64748b; }
+    .usecases li { margin-bottom:8px; }
+
+    .testimonial {
+      background:#020617;
+      color:#fff;
+      text-align:center;
+      padding:80px 0;
+    }
+
+    footer { background:#020617; color:#cbd5f5; }
+    .footer-grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); padding:60px 0; }
+    .footer-bottom { border-top:1px solid #1e293b; text-align:center; padding:16px; font-size:.85rem; }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">Horizon Logic</div>
+    <nav>
+      <a href="horizonSite.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about-us.html">About</a>
+    </nav>
+    <a href="#" class="btn-primary">Contact Us</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <div class="container">
+    <h1>Services Built for Modern Enterprises</h1>
+    <p>
+      Horizon Logic delivers technology solutions that modernize operations,
+      strengthen security, and enable sustainable growth.
+    </p>
+  </div>
+</section>
+
+<!-- DIGITAL TRANSFORMATION -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Digital Transformation</h2>
+    <p class="section-intro">
+      Digital transformation is more than new tools — it’s about redesigning systems,
+      processes, and culture to operate efficiently in a digital-first world.
+    </p>
+
+    <div class="platforms-grid">
+      <div class="platform">
+        <h3>Enterprise Modernization</h3>
+        <p>
+          We modernize legacy platforms and workflows to improve agility, performance,
+          and maintainability without disrupting business operations.
+        </p>
+        <ul class="usecases">
+          <li>Legacy system modernization</li>
+          <li>Process automation & optimization</li>
+          <li>Data-driven decision enablement</li>
+        </ul>
+      </div>
+
+      <div class="platform">
+        <h3>Customer & Employee Experience</h3>
+        <p>
+          Design digital experiences that improve engagement, productivity,
+          and operational transparency.
+        </p>
+        <ul class="usecases">
+          <li>Enterprise CMS & portals</li>
+          <li>Workflow digitization</li>
+          <li>Experience-driven architecture</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOUD COMPUTING -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Cloud Computing</h2>
+    <p class="section-intro">
+      We help organizations adopt cloud technologies securely and efficiently,
+      enabling scalability, resilience, and cost control.
+    </p>
+
+    <div class="platforms-grid">
+      <div class="platform">
+        <h3>Cloud Strategy & Migration</h3>
+        <p>
+          Develop a clear cloud roadmap aligned with business goals and
+          migrate workloads with minimal risk.
+        </p>
+        <ul class="usecases">
+          <li>Azure & AWS migration strategies</li>
+          <li>Hybrid & multi-cloud architecture</li>
+          <li>Infrastructure as Code (IaC)</li>
+        </ul>
+      </div>
+
+      <div class="platform">
+        <h3>DevOps & Cloud Operations</h3>
+        <p>
+          Improve reliability and delivery speed through automation,
+          observability, and DevOps best practices.
+        </p>
+        <ul class="usecases">
+          <li>CI/CD pipeline implementation</li>
+          <li>Kubernetes & container platforms</li>
+          <li>Monitoring, logging & cost optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CYBER SECURITY -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Cyber Security</h2>
+    <p class="section-intro">
+      Security is foundational to everything we build. We design systems
+      that protect data, infrastructure, and users.
+    </p>
+
+    <div class="platforms-grid">
+      <div class="platform">
+        <h3>Security Architecture & Risk Management</h3>
+        <p>
+          Identify vulnerabilities and implement controls that align
+          with industry standards and compliance requirements.
+        </p>
+        <ul class="usecases">
+          <li>Security assessments & threat modeling</li>
+          <li>Zero Trust architecture</li>
+          <li>Compliance & governance frameworks</li>
+        </ul>
+      </div>
+
+      <div class="platform">
+        <h3>Cloud & Application Security</h3>
+        <p>
+          Secure cloud workloads and applications throughout
+          the development lifecycle.
+        </p>
+        <ul class="usecases">
+          <li>Identity & access management (IAM)</li>
+          <li>Secure DevOps (DevSecOps)</li>
+          <li>Incident response planning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HR MANAGEMENT -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>HR Management & Workforce Systems</h2>
+    <p class="section-intro">
+      We support HR teams with technology solutions that improve workforce
+      management, compliance, and employee experience.
+    </p>
+
+    <div class="platforms-grid">
+      <div class="platform">
+        <h3>HR Systems & Process Optimization</h3>
+        <p>
+          Streamline HR operations using integrated platforms
+          that reduce manual effort and improve accuracy.
+        </p>
+        <ul class="usecases">
+          <li>HRIS & payroll integrations</li>
+          <li>Workflow automation</li>
+          <li>Policy & compliance tracking</li>
+        </ul>
+      </div>
+
+      <div class="platform">
+        <h3>People Analytics & Enablement</h3>
+        <p>
+          Use data to gain insight into workforce trends,
+          performance, and organizational health.
+        </p>
+        <ul class="usecases">
+          <li>Employee analytics dashboards</li>
+          <li>Talent & performance reporting</li>
+          <li>Change management support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="testimonial" data-aos="fade-up">
+  <div class="container">
+    <blockquote>
+      Let’s design systems that support growth, security, and long-term success.
+    </blockquote>
+    <div style="margin-top:32px;">
+      <a href="#" class="btn-primary">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Horizon Logic</h4>
+      <p>Digital engineering & IT consulting</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>info@horizonlogic.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <script>document.write(new Date().getFullYear())</script> Horizon Logic LLC
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration:900, offset:120, once:true });
+</script>
+
+</body>
+</html>

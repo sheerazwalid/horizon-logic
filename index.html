@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizon Logic | Digital Engineering & IT Consulting</title>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* ---------------- BASE ---------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html {
+      font-size: clamp(14px, 1vw + 0.5rem, 18px);
+    }
+
+    body {
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(90%, 1400px);
+      margin-inline: auto;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header {
+      background: #0f172a;
+      color: #ffffff;
+      padding-block: clamp(12px, 2vw, 20px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      margin-inline: clamp(0.5rem, 1vw, 1rem);
+      color: #cbd5f5;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: clamp(8px, 1vw, 12px) clamp(14px, 2vw, 20px);
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      border: 1px solid #334155;
+      color: #cbd5f5;
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #ffffff;
+      padding-block: clamp(80px, 12vw, 150px);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin-inline: auto;
+      margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      color: #cbd5f5;
+    }
+
+    .hero-actions a {
+      margin-inline: 0.5rem;
+    }
+
+    /* ---------------- SECTION HEADINGS ---------------- */
+    section {
+      padding-block: clamp(60px, 8vw, 100px);
+    }
+
+    section h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: clamp(30px, 5vw, 40px);
+      text-align: center;
+    }
+
+    .section-intro {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #64748b;
+      font-size: clamp(1rem, 1.3vw, 1.1rem);
+      line-height: 1.6;
+    }
+
+    /* ---------------- GRID COMPONENTS ---------------- */
+    .capabilities-grid,
+    .solutions-grid,
+    .platforms-grid,
+    .why-grid,
+    .insights-grid {
+      display: grid;
+      gap: clamp(16px, 2vw, 28px);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    }
+
+    .capability,
+    .solution,
+    .platform,
+    .insight {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: clamp(20px, 3vw, 32px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .capability:hover,
+    .solution:hover,
+    .platform:hover,
+    .insight:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .platform h3 {
+      font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+      color: #0f172a;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .platform p {
+      color: #475569;
+      margin-bottom: 18px;
+    }
+
+    .usecases {
+      list-style: disc;
+      padding-left: 20px;
+      color: #64748b;
+    }
+
+    .usecases li {
+      margin-bottom: 8px;
+    }
+
+    .usecases strong {
+      color: #0f172a;
+    }
+
+    /* ---------------- TESTIMONIAL ---------------- */
+    .testimonial {
+      background: #020617;
+      color: #ffffff;
+      text-align: center;
+      padding-block: clamp(60px, 8vw, 100px);
+    }
+
+    .testimonial blockquote {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-style: italic;
+      max-width: 900px;
+      margin-inline: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial span {
+      display: block;
+      color: #cbd5f5;
+      margin-top: 8px;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: clamp(20px, 2vw, 32px);
+      grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+      padding-block: clamp(50px, 6vw, 70px);
+    }
+
+    footer h4 {
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    footer a,
+    footer p {
+      display: block;
+      font-size: clamp(0.85rem, 1vw, 0.95rem);
+      margin-bottom: 6px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      padding-block: clamp(12px, 2vw, 16px);
+      font-size: clamp(0.8rem, 1vw, 0.9rem);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Horizon Logic</div>
+      <nav>
+        <a href="#">Services</a>
+        <a href="#">Solutions</a>
+        <a href="#">Industries</a>
+        <a href="#">Insights</a>
+        <a href="#">About</a>
+      </nav>
+      <a href="#" class="btn-primary">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1>Engineering Digital Systems That Scale</h1>
+      <p>Horizon Logic helps organizations modernize enterprise platforms, optimize operations, and build technology for long-term growth.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Explore Services</a>
+        <a href="#" class="btn-secondary">Talk to an Expert</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section data-aos="fade-up">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="capabilities-grid">
+        <div class="capability"><h3>Digital Engineering</h3><p>Design and build scalable platforms.</p></div>
+        <div class="capability"><h3>Cloud & DevOps</h3><p>Reliable, automated infrastructure.</p></div>
+        <div class="capability"><h3>Enterprise Platforms</h3><p>CMS, commerce, and integrations.</p></div>
+        <div class="capability"><h3>Security & Compliance</h3><p>Secure-by-design solutions.</p></div>
+        <div class="capability"><h3>Data & Analytics</h3><p>Actionable insights at scale.</p></div>
+        <div class="capability"><h3>IT Advisory</h3><p>Architecture and strategy guidance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOUD & DEVOPS -->
+  <section data-aos="fade-up">
+    <div class="container">
+      <h2>Cloud & DevOps</h2>
+      <p class="section-intro">
+        Accelerate innovation and reduce complexity with enterprise-grade cloud and DevOps strategies using Azure, AWS, Kubernetes, and Terraform.
+      </p>
+      <div class="platforms-grid">
+        <div class="platform">
+          <h3>Microsoft Azure</h3>
+          <p>Build, deploy, and scale enterprise apps using Microsoft’s secure global cloud ecosystem.</p>
+          <ul class="usecases">
+            <li><strong>Azure DevOps Pipelines</strong> — Automated CI/CD pipelines for faster delivery.</li>
+            <li><strong>AKS (Azure Kubernetes Service)</strong> — Secure, scalable microservices orchestration.</li>
+            <li><strong>Serverless Solutions</strong> — Event-driven systems using Azure Functions & Logic Apps.</li>
+          </ul>
+        </div>
+
+        <div class="platform">
+          <h3>Amazon Web Services (AWS)</h3>
+          <p>Use AWS for scalable, automated infrastructure across compute, data, and security layers.</p>
+          <ul class="usecases">
+            <li><strong>Elastic Compute (EC2 & ECS)</strong> — Autoscaling container workloads.</li>
+            <li><strong>Infrastructure as Code</strong> — Terraform and CloudFormation automation.</li>
+            <li><strong>Observability & Cost Control</strong> — CloudWatch, X-Ray, and FinOps optimization.</li>
+          </ul>
+        </div>
+
+        <div class="platform">
+          <h3>Kubernetes & Terraform</h3>
+          <p>Automate infrastructure and modernize applications with container orchestration and IaC.</p>
+          <ul class="usecases">
+            <li><strong>Multi-Cloud Deployments</strong> — Manage workloads across hybrid cloud platforms.</li>
+            <li><strong>GitOps Pipelines</strong> — Continuous delivery using ArgoCD and Flux.</li>
+            <li><strong>Reusable Terraform Modules</strong> — Version-controlled, scalable infrastructure templates.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTERPRISE PLATFORMS -->
+  <section data-aos="fade-up">
+    <div class="container">
+      <h2>Enterprise Platforms</h2>
+      <p class="section-intro">
+        We implement and optimize enterprise-grade digital platforms like AEM, Salesforce, and Hybris to deliver intelligent customer experiences.
+      </p>
+
+      <div class="platforms-grid">
+        <div class="platform">
+          <h3>Adobe Experience Manager (AEM)</h3>
+          <p>Deliver omnichannel content experiences and marketing workflows using AEM.</p>
+          <ul class="usecases">
+            <li><strong>Omnichannel Management</strong> — Unified publishing workflows.</li>
+            <li><strong>Headless Content Delivery</strong> — API-first experience delivery.</li>
+            <li><strong>Automated CI/CD</strong> — Integrated DevOps publishing pipelines.</li>
+          </ul>
+        </div>
+
+        <div class="platform">
+          <h3>Salesforce</h3>
+          <p>Enhance engagement with Salesforce CRM, Marketing, and Service Cloud.</p>
+          <ul class="usecases">
+            <li><strong>Customer 360 Integrations</strong> — Unified customer insights.</li>
+            <li><strong>Marketing Automation</strong> — Predictive engagement with AI tools.</li>
+            <li><strong>API-Led Connectivity</strong> — Seamless data exchange with MuleSoft.</li>
+          </ul>
+        </div>
+
+        <div class="platform">
+          <h3>SAP Hybris</h3>
+          <p>Enable B2B/B2C commerce with SAP Hybris integrated with ERP systems.</p>
+          <ul class="usecases">
+            <li><strong>Unified Commerce</strong> — Consistent data across all channels.</li>
+            <li><strong>Personalized Catalogs</strong> — Customer-specific pricing and offers.</li>
+            <li><strong>ERP Integration</strong> — Real-time sync with supply chain systems.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial" data-aos="fade-up">
+    <div class="container">
+      <blockquote>“Horizon Logic helped us modernize a complex enterprise platform without disrupting our operations. Their engineers worked like an extension of our internal team.”</blockquote>
+      <strong>Director of Technology</strong>
+      <span>Global Manufacturing Company</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Horizon Logic</h4>
+        <p>Digital engineering & IT consulting</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#">Cloud</a>
+        <a href="#">DevOps</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a href="#">E-Commerce</a>
+        <a href="#">Enterprise Platforms</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>info@horizonlogic.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <script>document.write(new Date().getFullYear())</script> Horizon Logic LLC
+    </div>
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      offset: 120,
+      once: true,
+      easing: "ease-out",
+    });
+  </script>
+</body>
+</html>

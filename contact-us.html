@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Horizon Logic</title>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- SAME CSS AS OTHER PAGES -->
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+    html { font-size: clamp(14px, 1vw + 0.5rem, 18px); }
+    body { color:#0f172a; background:#fff; line-height:1.6; scroll-behavior:smooth; }
+    a { text-decoration:none; color:inherit; }
+    .container { width:min(90%,1400px); margin:auto; }
+
+    header { background:#0f172a; color:#fff; padding:16px 0; }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .logo { font-size:1.5rem; font-weight:700; }
+    nav a { margin:0 1rem; color:#cbd5f5; font-weight:500; }
+    nav a:hover { color:#fff; }
+    .btn-primary { background:#2563eb; color:#fff; padding:10px 18px; border-radius:6px; font-weight:600; display:inline-block; }
+
+    .hero {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color:#fff;
+      padding:120px 0;
+      text-align:center;
+    }
+
+    section { padding:90px 0; }
+    section h2 { text-align:center; font-size:2.2rem; font-weight:800; margin-bottom:40px; }
+
+    .section-intro {
+      max-width:900px;
+      margin:0 auto 60px;
+      text-align:center;
+      color:#64748b;
+    }
+
+    .contact-grid {
+      display:grid;
+      gap:48px;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      align-items:start;
+    }
+
+    .contact-card {
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:10px;
+      padding:36px;
+    }
+
+    .contact-card h3 {
+      font-size:1.4rem;
+      margin-bottom:12px;
+    }
+
+    .contact-card p {
+      color:#475569;
+      margin-bottom:20px;
+    }
+
+    .contact-info p {
+      margin-bottom:10px;
+      font-weight:500;
+    }
+
+    .contact-form label {
+      display:block;
+      margin-bottom:6px;
+      font-weight:600;
+      font-size:.95rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width:100%;
+      padding:12px;
+      border:1px solid #cbd5e1;
+      border-radius:6px;
+      margin-bottom:20px;
+      font-size:1rem;
+    }
+
+    .contact-form textarea {
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .testimonial {
+      background:#020617;
+      color:#fff;
+      text-align:center;
+      padding:80px 0;
+    }
+
+    footer { background:#020617; color:#cbd5f5; }
+    .footer-grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); padding:60px 0; }
+    .footer-bottom { border-top:1px solid #1e293b; text-align:center; padding:16px; font-size:.85rem; }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">Horizon Logic</div>
+    <nav>
+      <a href="horizonSite.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about-us.html">About</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <a href="contact-us.html" class="btn-primary">Contact Us</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <div class="container">
+    <h1>Let’s Start the Conversation</h1>
+    <p>
+      Whether you’re planning a transformation, solving a complex challenge,
+      or exploring what’s next — we’d love to talk.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section data-aos="fade-up">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p class="section-intro">
+      Reach out to discuss your goals, challenges, or upcoming initiatives.
+      Our team responds promptly and treats every conversation with care and confidentiality.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- CONTACT INFO -->
+      <div class="contact-card contact-info">
+        <h3>Get in Touch</h3>
+        <p>
+          We work with organizations across industries to modernize platforms,
+          improve security, and enable sustainable growth.
+        </p>
+
+        <p><strong>Email:</strong> info@horizonlogic.com</p>
+        <p><strong>Location:</strong> United States (Remote-first)</p>
+        <p><strong>Engagements:</strong> Project-based · Advisory · Long-term partnerships</p>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-card">
+        <h3>Send Us a Message</h3>
+
+        <form class="contact-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@company.com" />
+
+          <label for="company">Company</label>
+          <input type="text" id="company" placeholder="Company name" />
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us about your project or question"></textarea>
+
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="testimonial" data-aos="fade-up">
+  <div class="container">
+    <blockquote>
+      Great systems start with the right conversation.
+    </blockquote>
+    <div style="margin-top:32px;">
+      <a href="services.html" class="btn-primary">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Horizon Logic</h4>
+      <p>Digital engineering & IT consulting</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>info@horizonlogic.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © <script>document.write(new Date().getFullYear())</script> Horizon Logic LLC
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration:900, offset:120, once:true });
+</script>
+
+</body>
+</html>
